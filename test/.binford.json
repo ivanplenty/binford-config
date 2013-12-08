@@ -1,0 +1,15 @@
+{
+	"jsonLoaded": true,
+	"jsonEnv" : "unknown",
+	"database" : {
+		"username" : "tim",
+		"password" : "more-power"
+	},
+	"systemv" : {
+		"isreal" : {
+			"yes" : "yes",
+			"no" : "yes"
+		},
+		"couples" : true
+	}
+}

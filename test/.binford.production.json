@@ -1,0 +1,7 @@
+{
+	"jsonEnv" : "production",
+	"database" : {
+		"password" : "al's mom",
+		"connection" : "on-air"
+	}
+}

@@ -1,0 +1,35 @@
+{
+  "name": "binford-config",
+  "version": "0.0.1",
+  "author": "Ivan Plenty <ivanplenty@gmail.com>",
+  "description": "Read only config module that pulls together optimist with json and yaml file parsing",
+  "main": "./lib/binford-config.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ivanplenty/binford-config.git"
+  },
+  "keywords": [
+    "binford",
+    "config",
+    "optimist",
+    "yaml"
+  ],
+  "dependencies" : {
+    "lodash"   :  "2.4.x",
+    "optimist" : "0.6.x",
+    "js-yaml": "1.x.x",
+    "binford-slf4j" : "0.0.x",
+    "binford-err" : "0.0.x"
+  },
+ "devDependencies":{
+    "mocha" : "1.13.x",
+    "should": "2.0.x",
+    "binford-logger" : "0.0.x"
+  },
+  "scripts": {
+      "blanket": {
+        "pattern": ["binford-config/lib/"]
+      }
+  },
+  "license": "MIT"
+}
