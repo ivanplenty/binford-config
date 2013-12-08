@@ -16,34 +16,35 @@ The get() method will not throw an exception, and instead prefers to return unde
 
 Synopsis
 ========
-var config = require('binford-config');
 
-config.binfordConvention(__dirname);
-// many people prefer this as well
-// config.binfordConvention(__dirname + "/conf");
+    var config = require('binford-config');
 
-var database = require('database').connect(
+    config.binfordConvention(__dirname);
+    // many people prefer this as well
+    // config.binfordConvention(__dirname + "/conf");
+
+    var database = require('database').connect(
 	config.get("database:username"),
 	config.get("database:password")
-);
+    );
 
-var isProduction = (config.get("NODE_ENV") == 'production');
+    var isProduction = (config.get("NODE_ENV") == 'production');
 
-// That's it.
+    // That's it.
 
 Binford Convention
 ==================
 The binford precendence is roughly implemented using this logic:
 
-// load values from the specific fil
-config.loadFile(path.join(__dirname, ".binford.json"));
-config.loadFile(path.join(__dirname, ".binford.yml"));
-// checks the environment variables set at runtime
-config.loadFile(path.join(__dirname, ".binford.production.json"));
-config.loadFile(path.join(__dirname, ".binford.production.yml"));
-// load any values stored in the system environment variables
-config.loadEnv();
-// load any arguments passed in via the command-line
-config.loadArgv();
+    // load values from the specific fil
+    config.loadFile(path.join(__dirname, ".binford.json"));
+    config.loadFile(path.join(__dirname, ".binford.yml"));
+    // checks the environment variables set at runtime
+    config.loadFile(path.join(__dirname, ".binford.production.json"));
+    config.loadFile(path.join(__dirname, ".binford.production.yml"));
+    // load any values stored in the system environment variables
+    config.loadEnv();
+    // load any arguments passed in via the command-line
+    config.loadArgv();
 
-// That's it!
+    // That's it!
